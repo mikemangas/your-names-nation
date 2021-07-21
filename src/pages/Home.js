@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useFetch from "../components/useFetch";
+import useFetch from "../hooks/useFetch";
 
 export default function Home() {
   const [state, setState] = useState();

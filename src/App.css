@@ -1,20 +1,19 @@
 .App {
   text-align: center;
+  display: grid;
+  grid-template-rows: 15vh auto 10vh;
+  height: 100vh;
 }
 
 .App__header {
   border-bottom: 1px solid black;
 }
 
-.App__navigation {
-  display: flex;
-  justify-content: space-between;
-}
-
 .App__navigation a.active {
   color: red;
 }
 
-.mike {
-  width: 50%;
+.Footer {
+  display: flex;
+  justify-content: space-around;
 }

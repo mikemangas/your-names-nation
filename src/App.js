@@ -1,37 +1,40 @@
 import "./App.css";
 import { Switch, Route, NavLink } from "react-router-dom";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Hobbies from "./pages/Hobbies";
-import Contact from "./pages/Contact";
+import Age from "./pages/Age";
+import Nation from "./pages/Nation";
+import Gender from "./pages/Gender";
 
 function App() {
   return (
     <div className="App">
       <header className="App__header">
         <nav className="App__navigation">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/hobbies">Hobbies</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <p>Logo</p>
         </nav>
       </header>
       <main>
         <Switch>
-          <Route path="/contact">
-            <Contact />
+          <Route path="/gender">
+            <Gender />
           </Route>
-          <Route path="/hobbies">
-            <Hobbies />
+          <Route path="/nation">
+            <Nation />
           </Route>
-          <Route path="/about">
-            <About />
+          <Route path="/age">
+            <Age />
           </Route>
           <Route path="/">
             <Home />
           </Route>
         </Switch>
       </main>
+      <footer>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/age">Age</NavLink>
+        <NavLink to="/nation">Nation</NavLink>
+        <NavLink to="/gender">Gender</NavLink>
+      </footer>
     </div>
   );
 }

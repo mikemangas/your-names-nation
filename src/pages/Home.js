@@ -17,7 +17,7 @@ export default function Home() {
     const url = `https://api.nationalize.io/?name=${state}`;
     fetch(url)
       .then((response) => response.json())
-      .then((data) => setCountry(data.country[0]));
+      .then((data) => setCountry(data.country[0].country_id));
   });
 
   useEffect(() => {

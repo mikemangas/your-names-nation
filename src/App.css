@@ -1,3 +1,13 @@
+@import "/src/css/color.css";
+
+p {
+  color: var(--pink);
+}
+
+h2,
+h3 {
+  color: var(--pink);
+}
 .App {
   text-align: center;
   display: grid;
@@ -6,14 +16,51 @@
 }
 
 .App__header {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--turkis);
+  background-color: var(--pink);
+  color: var(--beige);
 }
 
 .App__navigation a.active {
-  color: red;
+  color: var(--beige);
 }
 
 .Footer {
+  border-top: 1px solid var(--turkis);
+  background-color: var(--pink);
+  color: var(--beige);
   display: flex;
+  align-items: center;
   justify-content: space-around;
+}
+
+.Footer a {
+  color: var(--beige);
+}
+main {
+  background-color: var(--beige);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.submitForm {
+  margin-top: 20px;
+}
+.submitForm * {
+  padding: 10px;
+  margin-left: 10px;
+}
+.submitForm > button {
+  background-color: var(--pink);
+  color: white;
+  border-color: var(--turkis);
+}
+.submitForm > input {
+  background-color: var(--beige);
+  color: var(--pink);
+  border-color: var(--turkis);
 }

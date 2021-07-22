@@ -10,11 +10,8 @@ export default function Header() {
         <Route path="/nation">
           <h1>What is your Nation?</h1>
         </Route>
-        <Route path="/age">
-          <h1>What is your Age?</h1>
-        </Route>
         <Route path="/">
-          <h1>WHO - IS - YOUR - NAME</h1>
+          <h1>What is your Age?</h1>
         </Route>
       </Switch>
     </header>

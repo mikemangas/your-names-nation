@@ -1,7 +1,6 @@
-import "../../src/App.css";
 import React, { useState } from "react";
 
-export default function Age() {
+export default function Form({ result }) {
   const [typedValue, setTypedValue] = useState();
   const [age, setAge] = useState();
 
@@ -11,19 +10,17 @@ export default function Age() {
     const formInputValue = form.input.value;
     setTypedValue(formInputValue);
 
-    if (age) {
-      const url = `https://api.agify.io/?name=${typedValue}`;
-      fetch(url)
-        .then((response) => response.json())
-        .then((data) => setAge(data?.age));
-    } else {
-      setAge("sorry, we dont have your name in our database");
-    }
+    const url = `https://api.agify.io/?name=${typedValue}`;
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => setAge(data.age));
   }
+
+  console.log(age);
 
   return (
     <div className="Home">
-      <h2>Discover how old a typical person of your name is!</h2>
+      <h2>WHO - ARE - YOU</h2>
       <form onSubmit={handleOnSubmit} className="submitForm">
         <input
           name="input"
@@ -33,7 +30,7 @@ export default function Age() {
         ></input>
         <button type="submit">Explore</button>
       </form>
-      <p className="res">Your names typical age is: {age}</p>
+      <p className="res">{result}</p>
     </div>
   );
 }

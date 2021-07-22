@@ -1,20 +1,77 @@
+@import "/src/css/color.css";
+
+p {
+  color: var(--pink);
+}
+
+h2,
+h3 {
+  color: var(--pink);
+}
 .App {
   text-align: center;
+  display: grid;
+  grid-template-rows: 15vh auto 10vh;
+  height: 100vh;
 }
 
 .App__header {
-  border-bottom: 1px solid black;
-}
-
-.App__navigation {
-  display: flex;
-  justify-content: space-between;
+  border-bottom: 1px solid var(--turkis);
+  background-color: var(--pink);
+  color: var(--beige);
 }
 
 .App__navigation a.active {
-  color: red;
+  color: var(--beige);
 }
 
-.mike {
-  width: 50%;
+.Footer {
+  border-top: 1px solid var(--turkis);
+  background-color: var(--pink);
+  color: var(--beige);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Footer a {
+  color: var(--pink);
+  background-color: var(--beige);
+  padding: 5px;
+  text-decoration: none;
+}
+
+.Footer a:hover {
+  transition: all 0.7s ease-in;
+  transform: rotate(360deg);
+  padding: 10px;
+  text-decoration: dashed;
+}
+
+main {
+  background-color: var(--beige);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.submitForm {
+  margin-top: 20px;
+}
+.submitForm * {
+  padding: 10px;
+  margin-left: 10px;
+}
+.submitForm > button {
+  background-color: var(--pink);
+  color: white;
+  border-color: var(--turkis);
+}
+.submitForm > input {
+  background-color: var(--beige);
+  color: var(--pink);
+  border-color: var(--turkis);
 }

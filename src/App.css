@@ -35,8 +35,19 @@ h3 {
 }
 
 .Footer a {
-  color: var(--beige);
+  color: var(--pink);
+  background-color: var(--beige);
+  padding: 5px;
+  text-decoration: none;
 }
+
+.Footer a:hover {
+  transition: all 0.7s ease-in;
+  transform: rotate(360deg);
+  padding: 10px;
+  text-decoration: dashed;
+}
+
 main {
   background-color: var(--beige);
   display: flex;
